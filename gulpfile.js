@@ -22,14 +22,14 @@ gulp.task('optimizepng', function() {
         })).pipe(gulp.dest("./public/"));
 });
 gulp.task('optimizejpg', function() {
-    gulp.src(["./images/*.jpg", "./images/*.jpeg"]).pipe(imageop({
+    gulp.src(["./images/**/*.jpg", "./images/**/*.jpeg"]).pipe(imageop({
 			mozjpeg: true,
 			concurrent: 10
         })).pipe(gulp.dest("./public/"));
 });
 
 gulp.task('optimizegif', function() {
-    gulp.src(["./images/*.gif"]).pipe(imageop({
+    gulp.src(["./images/**/*.gif"]).pipe(imageop({
 			gifsicle: true,
         })).pipe(gulp.dest("./public/"));
 });
